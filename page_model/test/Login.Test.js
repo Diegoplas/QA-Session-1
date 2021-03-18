@@ -40,7 +40,7 @@ test('4. Navigate to shopping cart', async t =>{
 test('5. Add a single item to the shopping cart', async t =>{
   await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
   await t
-    .click(ProductsPage.bikeLightsUrl)
+    .click(ProductsPage.backpackUrl)
     .click(IndividualProductPage.addToCartButton)
     .click(IndividualProductPage.backToProductsButton)
     .click(ProductsPage.cartButton)
@@ -51,7 +51,7 @@ test('5. Add a single item to the shopping cart', async t =>{
 test('6. Add multiple items to the shopping cart', async t =>{
   await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
   await t
-    .click(ProductsPage.bikeLightsUrl)
+    .click(ProductsPage.backpackUrl)
     .click(IndividualProductPage.addToCartButton)
     .click(IndividualProductPage.backToProductsButton)
     .click(ProductsPage.onesieUrl)
