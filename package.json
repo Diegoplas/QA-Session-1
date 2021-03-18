@@ -1,0 +1,11 @@
+{
+  "name": "qa-assesment-1",
+  "version": "1.0.0",
+  "description": "Assesment 1. QA Certification.",
+  "main": "index.js",
+  "scripts": {
+    "test-all-chrome": "testcafe chrome ./page_model/test"
+  },
+  "author": "Diego Plascencia",
+  "license": "ISC"
+}
