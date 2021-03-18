@@ -83,18 +83,16 @@ test('8. Fill users information', async t =>{
   await t.expect(CheckoutOverviewPage.checkoutOverviewTitle.exists).ok()
 })
 
-test.only('9. Complete a purchase', async t =>{
+test('9. Complete a purchase', async t =>{
   await LoginPage.submitLoginForm(CREDENTIALS.VALID_USER.USERNAME, CREDENTIALS.VALID_USER.PASSWORD)
   await t
     .click(ProductsPage.backpackUrl)
     .click(IndividualProductPage.addToCartButton)
-    //.click(IndividualProductPage.backToProductsButton)
-    //.click(ProductsPage.onesieUrl)
-    //.click(IndividualProductPage.addToCartButton)
     .click(ProductsPage.cartButton)
     .click(CartPage.checkoutButton)
   await CheckoutInformationPage.submitBuyerData('Juan', 'Perez', '33142')
-  await t.expect(CheckoutOverviewPage.backpackInOverview.innerText).eql(CartPage.backpackTextInCart.innerText)
+  await t.expect(CheckoutOverviewPage.backpackInOverview.innerText).eql("Sauce Labs Backpack")
+  //Was not able to confirm the expect of two different variables as the comment below Error: "deeply equal{Object...}"
   //await t.expect(CartPage.backpackInCart.innerText).eql(CheckoutOverviewPage.backpackInOverview.innerText)
 })
 
